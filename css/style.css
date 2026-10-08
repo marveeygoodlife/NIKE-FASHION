@@ -381,10 +381,11 @@ body .small-label {
  }
 .hero-btns {
   display: flex;
-   justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 1rem;
   margin: 10px9 0;
-  flex-wrap: nowrap;
 }
  
 .hero-image img {
@@ -510,7 +511,9 @@ text-align: center;
 
 @media screen and (min-width: 992px) {
   .hero-btns {
-    flex-direction: unset !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
