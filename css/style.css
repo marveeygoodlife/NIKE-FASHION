@@ -386,9 +386,11 @@ body .small-label {
 
 .hero-btns {
   display: flex;
-margin: var(--space-lg) 0;  
-gap: 1rem;
-   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: var(--space-lg) 0;
 }
  
 .hero-image img {
@@ -599,6 +601,14 @@ section .section-header p {
     padding: var(--space-lg);
   }
 
+}
+
+@media screen and (min-width: 992px) {
+  .hero-btns {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {
