@@ -68,8 +68,7 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+
   box-sizing: border-box;
 }
 
@@ -363,28 +362,33 @@ section {
 /* hero style */
 section#hero {
     margin-top: var(--space-xs);
-
+.container {
+  padding: 0 1.25rem;
+}
   h1 {
   font-size: var(--font-size-h1);
   margin:  var(--space-md)  0;
 }
 p {
   margin: var(--space-lg) 0;
+  max-width: 500px;
 }
 
 }
 body .small-label {
+  display: inline-block;
   font-size: small;
   font-weight: var(--font-weight-regular);
   text-transform: uppercase;
   color: var(--color-accent);
+  letter-spacing: 0.08rem;
  }
+
 .hero-btns {
   display: flex;
-   justify-content: space-evenly;
-  gap: 1rem;
-  margin: 10px9 0;
-  flex-wrap: wrap;
+margin: var(--space-lg) 0;  
+gap: 1rem;
+   flex-wrap: wrap;
 }
  
 .hero-image img {
@@ -401,21 +405,6 @@ top: 0;}
   padding: var(--space-4xl) 0;
 
   /* feature category header */
-  .section-header {
-text-align: center;
-
-.section-label {
-  margin-bottom: var(--space-sm);
-  color: var(--color-accent);
-}
-.section-title {
-  margin-bottom: var(--space-md);
-}
-.section-description {
-  margin-bottom: var(--space-xl);
-}
-  }
-
   a {
         text-decoration: none;
         color: inherit;
@@ -448,7 +437,111 @@ text-align: center;
    }
 }
 
+/* featured products */
+.featured-products {
+  background-color: #f8f7f4;
+    padding: var(--space-section) 0;
+}
 
+section .section-header {
+    max-width: 650px;
+    margin: 0 auto var(--space-xl);
+}
+section .section-header span {
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+section .section-header h2 {
+    margin: var(--space-md) 0;
+    font-size: var(--font-size-h2);
+}
+
+section .section-header p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+.product-card {
+    height: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-light);
+}
+.product-image {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-light);
+    aspect-ratio: 3 / 2;
+}
+ .product-image img {
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+        transition: transform .4s ease;
+}
+.product-card:hover .product-image img {
+  transform: scale(1.03);
+}
+.product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 0.7rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+}
+
+.product-content {
+    padding: var(--space-md) var(--space-sm);
+}
+
+.product-category {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-secondary);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-semibold);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.product-content h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.product-price {
+    margin: 0 0 1rem;
+    font-size: .8rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+}
+
+.product-link {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+}
+
+.section-action {
+    margin-top: var(--space-xl);
+}
 /* Media queries */
 /*MOBILE NAVBAR */
 @media (max-width: 991.98px) {
@@ -508,12 +601,12 @@ text-align: center;
 
 }
 
-@media screen and (min-width: 992px) {
-  .hero-btns {
-    flex-direction: unset !important;
-  }
+@media (min-width: 768px) {
+    #hero .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
-
 /*ACCESSIBILIT */
 :focus-visible {
   outline: 2px solid var(--color-accent);
