@@ -384,7 +384,7 @@ body .small-label {
    justify-content: space-evenly;
   gap: 1rem;
   margin: 10px9 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
  
 .hero-image img {
