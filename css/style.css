@@ -595,6 +595,11 @@ section .section-header p {
     padding: var(--space-lg) 0;
   }
 
+  .navbar-collapse.collapsing {
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+  }
+
   .navbar-nav {
     gap: 4px;
   }
