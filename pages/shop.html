@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"  content="Nike Fashion Shop - Fashion and Jewelry products.">
+  <meta  name="author" content="Nike Fashion Shop" >
+  <title>Shop | Nike  Fashion | Abuja based Fashion & Jewelry hub</title>
+  <!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nike Fashion Shop | Fashion & Jewelry">
+<meta property="og:description" content="Shop quality fashion, jewelry and accessories curated to elevate your everyday style.">
+<meta property="og:url" content="https://nikefashion.vercel.app/">
+<meta property="og:image" content="https://nikefashion.vercel.app//images/og-image.jpg">
+<meta property="og:site_name" content="Nike Fashion Shop">
+<meta property="og:locale" content="en_NG">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nike Fashion Shop | Fashion & Jewelry">
+<meta name="twitter:description" content="Shop quality fashion, jewelry and accessories curated to elevate your everyday style.">
+<meta name="twitter:image" content="https://nikefashion.vercel.app/images/og-image.jpg">
+    <!-- css -->
+     <link rel="stylesheet" href="/css/style.css">
+    <!-- bootstrap cdn -->     
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+<body>
+
+  <!-- Header -->
+  <header id="site-header">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+
+  <div class="container">
+
+    <!-- Brand -->
+    <a  class="navbar-brand fw-semibold"  href="/index.html"  aria-label="Nike Fashion">Nike   Fashion </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"  aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Main Links -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html" >Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a  class="nav-link active"  href="shop.html" aria-current="page" href="shop.html"> Shop </a>
+        </li>
+
+        <li class="nav-item">
+          <a  class="nav-link"   href="pages/categories.html">Categories </a>
+        </li>
+
+        <li class="nav-item">
+          <a  class="nav-link" href="pages/about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="pages/contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Navbar Actions -->
+      <div class="navbar-actions d-flex align-items-center gap-3">
+
+        <!-- Search -->
+        <a   href="#" class="navbar-action" aria-label="Search products"> <i class="bi bi-search" ></i></a>
+
+        <!-- Wishlist -->
+        <a href="#" class="navbar-action" aria-label="Wishlist">
+          <i class="bi bi-heart"></i>
+        </a>
+
+        <!-- Cart -->
+        <a href="#" class="navbar-action position-relative" aria-label="Shopping cart"> <i class="bi bi-bag"></i>  <span class="cart-count" aria-label="0 items in cart">  0
+          </span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+  <!-- Main Content -->
+<main>
+
+    <section id="shop-header">
+        <div class="container">
+            <header class="section-header text-center">
+                <span class="small-label">SHOP</span>
+                <h1>Explore Our Collection</h1>
+                <p>
+                    Discover fashion, jewelry and accessories curated
+                    for your everyday style.
+                </p>
+            </header>
+        </div>
+    </section>
+
+    <section id="shop-products">
+        <div class="container">
+
+            <div class="shop-controls">
+              <form action="" method="get" id="shop-form">
+                <div class="row justify-content-center text-center ">
+                  <div class="col-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
+                             <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-search" aria-hidden="true" id="search-icon"></i></span>
+                <input type="search" name="search" id="search-product" placeholder="Search products" aria-label="search product" class="form-control">
+                </div>
+                  </div>
+
+                  <div class="col-6 col-md-6 col-lg-4">
+                     <select name="category" id="category-product" class="form-select">
+  <option selected value="All categories">All categories</option>
+  <option value="clothes">Clothes</option>
+  <option value="shoes">Shoes</option>
+  <option value="bags">Bags</option>
+  <option value="jewelry">Jewelry</option>
+ </select>
+
+                  </div>
+
+                  <div class="col-6 col-md-6 col-lg-4">
+ <select name="sort" id="sort-product" class="form-select">
+  <option selected disabled>Sort by: <i class="bi bi-funnel" aria-hidden="true"></i></option> 
+<option value="newest">Newest</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-high">Price: High to Low</option>
+  </select>
+                  </div>
+                </div>
+              </form>
+            
+            </div>
+
+            <div class="section-header text-center">
+                <h2>Our Products</h2>       
+            </div>
+
+              <!-- Product cards -->
+            <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1652501069751-9b122147de17?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fGRyZXNzfGVufDB8MHwwfHx8MA%3D%3D" alt="New arrival women's fashion dress" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Dresses</span>
+                        <h3>Classic Women's Dress</h3>
+                        <p class="product-price">₦55,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1645276241987-7a7c14bf88f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhhbmRiYWd8ZW58MHwwfDB8fHww" alt="New arrival women's handbag" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Bags</span>
+                        <h3>Elegant Leather Handbag</h3>
+                        <p class="product-price">₦52,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1787769500023-197fa5921f43?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="New arrival gold necklace" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Jewelry</span>
+                        <h3>Gold Layered Necklace</h3>
+                        <p class="product-price">₦28,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/images/women-shoe.jpg" alt="New arrival women's shoes" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Shoes</span>
+                        <h3>Elegant Women's Heels</h3>
+                        <p class="product-price">₦45,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+            <hr>
+                    <!-- Product 5 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1562070354-930df66ead59?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxkcmVzcyUyMG9uJTIwbWFubmVxdWlufGVufDB8MHwwfHx8MA%3D%3D" alt="black and white checkered  button up shirt" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Dresses</span>
+                        <h3>Red Leather Jacket</h3>
+                        <p class="product-price">₦195,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1681747685985-a401c271156c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="pink handbag sitting on a marble counter" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Bags</span>
+                        <h3>Pink Leather Handbag</h3>
+                        <p class="product-price">₦150,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1717409014701-8e630ff057f3?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bunch of gold jewelry on display in a store" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Jewelry</span>
+                        <h3>Gold Jewelry</h3>
+                        <p class="product-price">₦230,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1618274158630-bc47a614b3a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGhlZWxzfGVufDB8fDB8fHww" alt="black and brown  leather peep toe heeled shoes" class="img-fluid" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Shoes</span>
+                        <h3>Peep Toe Heeled Shoes</h3>
+                        <p class="product-price">₦500,000</p>
+                        <a href="#" class="product-link">View Product</a>
+                    </div>
+                </article>
+            </div>
+     
+        </div>
+
+        <!-- Pagination -->
+            <nav aria-label="Search result page">
+                <!-- Pagination -->
+                 <ul class="pagination align-items-center justify-content-center">
+                  <li class="page-item"><a href="" class="page-link"  aria-label="previous"><span aria-hidden="true">&laquo;</span></a></li>
+                  <li class="page-item"><a href="#" class="page-link">1</a></li>
+                  <li class="page-item"><a href="#" class="page-link">2</a></li>
+                  <li class="page-item"><a href="#" class="page-link">3</a></li>
+                  <li class="page-item"><a href="#" class="page-link" aria-label="next"><span>&raquo;</span></a></li>
+                 </ul>
+            </nav>
+
+        </div>
+    </section>
+
+</main>
+
+  <!-- Footer -->
+<footer id="site-footer">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Brand -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="footer-brand">
+                    <a href="/index.html" class="footer-logo">Nike Fashion</a>
+                    <p>Fashion, jewelry and accessories curated to elevate your everyday style.</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/shop.html">Shop</a></li>
+                        <li><a href="/pages/categories.html">Categories</a></li>
+                        <li><a href="/pages/about.html">About</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Watches</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Abuja, Nigeria</span></li>
+                        <li><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+2340000000000">+234 000 000 0000</a></li>
+                        <li><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hello@nikefashion.com">hello@nikefashion.com</a></li>
+                    </ul>
+
+                    <div class="footer-social">
+                        <a href="#" aria-label="Follow Nike Fashion on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow Nike Fashion on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow Nike Fashion on TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nike Fashion. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+  <!-- Bootstrap JavaScript --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="/js/main.js"></script>
+
+</body>
+</html>
