@@ -9,6 +9,9 @@
   --color-border: #e5e5e5;
   --color-border-dark: #555555;
   --color-accent: #c9a227;
+  --color-text: var(--color-primary);
+  --color-text-secondary: var(--color-secondary);
+  --color-light: var(--color-surface);
 
   /*TYPOGRAPHY*/
   --font-primary: "Inter", sans-serif;
@@ -42,9 +45,11 @@
   --container-width: 75rem;          /* 1200px */
   --section-padding: 5rem;            /* 80px */
   --section-padding-mobile: 3.5rem;   /* 56px */
+  --space-section: var(--section-padding);
 
   /*  BORDERS & RADIUS */
  --border-width: 1px; /* 1px */
+  --border-style: solid;
   --radius-sm: 0.25rem;      /* 4px */
   --radius-md: 0.5rem;       /* 8px */
 
@@ -746,45 +751,6 @@ section .section-header p {
     border-color: var(--color-white);
 }
 
-#cta {
-    padding: var(--section-padding) 0;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.cta-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.cta-content .small-label {
-    margin-bottom: var(--space-sm);
-}
-
-.cta-content h2 {
-    margin: 0 0 var(--space-md);
-    font-size: var(--font-size-h2);
-    line-height: var(--line-height-heading);
-}
-
-.cta-content p {
-    max-width: 600px;
-    margin: 0 auto var(--space-lg);
-    color: rgba(255, 255, 255, 0.8);
-}
-
-#cta .btn-primary-custom {
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-    border-color: var(--color-accent);
-}
-
-#cta .btn-primary-custom:hover {
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    border-color: var(--color-white);
-}
-
 #site-footer {
     padding: var(--section-padding) 0 var(--space-lg);
     background-color: var(--color-primary);
@@ -1336,10 +1302,6 @@ nav {
 
   h2 {
     font-size: 30px;
-  }
-
-  h3 {
-    font-size: var(--font-size-h3);
   }
 
   .section {
@@ -2024,10 +1986,6 @@ nav {
 
     .contact-information {
         padding-right: var(--space-2xl);
-    }
-
-    .contact-form-wrapper {
-        padding: var(--space-2xl);
     }
 
 }
