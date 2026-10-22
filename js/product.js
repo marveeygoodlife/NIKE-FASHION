@@ -88,3 +88,4 @@ const products = [
 		color: ["Red", "Black", "Crimson", "Beige"],
 	},
 ];
+
