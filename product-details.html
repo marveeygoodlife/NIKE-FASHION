@@ -105,16 +105,16 @@
 
             <!-- product image -->
             <div class="product-image col-12 col-md-6">
-                <img src="/images/seiko-watch-potrait.avif" alt="A black Seiko watch with white hands" class="img-fluid">
+                <img src="/images/seiko-watch-potrait.avif" alt="A black Seiko watch with white hands" class="img-fluid" id="product-image">
             </div>
 
             <!-- product information -->
             <div class="product-info col-12 col-md-6">
-                <span class="product-category">Jewelry</span>
-                <h1>Seiko Watch</h1>
+                <span class="product-category"  id="product-category">Jewelry</span>
+                <h1 id="product-name">Seiko Watch</h1>
 
                 <!-- product review -->
-                <div class="product-rating">
+                <div class="product-rating"  id="product-rating">
                        <div class="review-rating" aria-label="5 out of 5 stars">
                         <i class="bi bi-star-fill" aria-hidden="true"></i>
                         <i class="bi bi-star-fill" aria-hidden="true"></i>
@@ -125,9 +125,9 @@
                 </div>
 
 <!-- product price -->
-                <p class="product-price">₦430,000</p>
+                <p class="product-price"  id="product-price">₦430,000</p>
 
-                    <p class="product-description">An elegant black Seiko watch designed to elevate your everyday style with a clean, timeless look.
+                    <p class="product-description"  id="product-description">An elegant black Seiko watch designed to elevate your everyday style with a clean, timeless look.
 </p>
 
                     <!-- product option -->
@@ -137,8 +137,6 @@
 
                             <select name="product-size" id="product-size" class="form-select">
                                 <option value="" selected disabled>Select</option>
-                                <option value="23">23mm</option>
-                                <option value="43">43mm</option>
                             </select>
                         </fieldset>
 
@@ -147,8 +145,7 @@
                             <legend>Color</legend>
                             <select name="product-color" id="product-color" class="form-select">
                                 <option disabled selected>Choose</option>
-                                <option value="black-color">Black</option>
-                                <option value="gold-color">Gold</option>
+                           
                             </select>
                         </fieldset>
                     </div>
@@ -159,19 +156,19 @@
 
                 <!-- quantity controls -->
                 <div class="quantity-controls">
-                    <button type="button" aria-label="decrease quantity">
+                    <button type="button" aria-label="decrease quantity"  id="decrease-quantity">
                     <i class="bi bi-dash" aria-hidden="true"></i>
                 </button>
 
                 <input type="number" name="quantity" id="quantity" placeholder="1" min="1" value="1" aria-label="product quantity" class="form-control">
-                <button type="button" aria-label="Increase quantity">
+                <button type="button" aria-label="Increase quantity"  id="increase-quantity">
                     <i class="bi bi-plus" aria-hidden="true"></i>
                 </button>
                 </div>
                 
-                <!--category cta  -->
+                <!--category add to cart  -->
                 <div class="category-cta">
-                    <button type="button" aria-label="Add to cart " class="mt-3 btn-primary-custom"><i class="bi bi-cart" aria-hidden="true"></i> Add to Cart</button>
+                    <button type="button" aria-label="Add to cart " class="mt-3 btn-primary-custom" id="add-to-cart"><i class="bi bi-cart" aria-hidden="true"></i> Add to Cart</button>
                     <a href="#" class="product-link text-decoration-underline">Shop on Whatsapp <i class="bi bi-arrow-up-right-circle" aria-hidden="true"></i></a>
                 </div>
                 </div>
@@ -180,6 +177,7 @@
          </div>
          </div>
     </section>
+
   <!-- Product Information -->
 <section class="product-information-section">
     <div class="container">
@@ -189,7 +187,7 @@
             <!-- Description -->
             <div class="product-information-block">
                 <h2>Description</h2>
-                <p>
+                <p id="product-full-description">
                     An elegant black Seiko watch designed to elevate your everyday
                     style with a clean, timeless look.
                 </p>
@@ -202,22 +200,22 @@
                 <dl class="product-details-list">
                     <div>
                         <dt>Brand</dt>
-                        <dd>Seiko</dd>
+                        <dd id="product-brand">Seiko</dd>
                     </div>
 
                     <div>
                         <dt>Category</dt>
-                        <dd>Jewelry</dd>
+                        <dd id="product-category-detail">Jewelry</dd>
                     </div>
 
                     <div>
                         <dt>Color</dt>
-                        <dd>Black</dd>
+                        <dd id="product-color-detail">Black</dd>
                     </div>
 
                     <div>
                         <dt>Available Sizes</dt>
-                        <dd>23mm, 43mm</dd>
+                        <dd id="product-sizes-detail">23mm, 43mm</dd>
                     </div>
                 </dl>
             </div>
@@ -384,7 +382,9 @@
   <!-- Bootstrap JavaScript --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
   <!--   JavaScript -->
-  <script src="/js/main.js"></script>
+  <script src="/js/product.js"></script>
+    <script src="/js/script.js"></script>
+
 </body>
 </html>
 
