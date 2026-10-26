@@ -96,8 +96,8 @@
              <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="/shop.html">Shop</a></li>
-                <li class="breadcrumb-item"><a href="/shop.html?category=jewelry">Jewelry</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Seiko Watch</li>
+                <li class="breadcrumb-item"><a href="/shop.html?category=jewelry"  id="breadcrumb-category"> Watches</a></li>
+                <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-title">Stainless Steel Wristwatch</li>
              </ul>
          </nav>
 
@@ -105,13 +105,13 @@
 
             <!-- product image -->
             <div class="product-image col-12 col-md-6">
-                <img src="/images/seiko-watch-potrait.avif" alt="A black Seiko watch with white hands" class="img-fluid" id="product-image">
+                <img src="https://images.pexels.com/photos/20197656/pexels-photo-20197656.jpeg" alt="Elegant black and white photo of a stainless steel wristwatch on white background" class="img-fluid" id="product-image">
             </div>
 
             <!-- product information -->
             <div class="product-info col-12 col-md-6">
-                <span class="product-category"  id="product-category">Jewelry</span>
-                <h1 id="product-name">Seiko Watch</h1>
+                <span class="product-category"  id="product-category"></span>
+                <h1 id="product-name">Stainless Steel Wristwatch</h1>
 
                 <!-- product review -->
                 <div class="product-rating"  id="product-rating">
@@ -125,9 +125,9 @@
                 </div>
 
 <!-- product price -->
-                <p class="product-price"  id="product-price">₦430,000</p>
+                <p class="product-price"  id="product-price">₦150,000</p>
 
-                    <p class="product-description"  id="product-description">An elegant black Seiko watch designed to elevate your everyday style with a clean, timeless look.
+                    <p class="product-description"  id="product-description">Complete your look with this elegant stainless steel wristwatch, designed to combine timeless style with everyday functionality. Perfect for work, casual outings, and special occasions, it adds a refined touch to any outfit
 </p>
 
                     <!-- product option -->
@@ -137,6 +137,7 @@
 
                             <select name="product-size" id="product-size" class="form-select">
                                 <option value="" selected disabled>Select</option>
+                                <option value="one size">One Size</option>
                             </select>
                         </fieldset>
 
@@ -145,7 +146,7 @@
                             <legend>Color</legend>
                             <select name="product-color" id="product-color" class="form-select">
                                 <option disabled selected>Choose</option>
-                           
+                           <option value="silver">Silver</option>
                             </select>
                         </fieldset>
                     </div>
@@ -188,8 +189,7 @@
             <div class="product-information-block">
                 <h2>Description</h2>
                 <p id="product-full-description">
-                    An elegant black Seiko watch designed to elevate your everyday
-                    style with a clean, timeless look.
+                    Complete your look with this elegant stainless steel wristwatch, designed to combine timeless style with everyday functionality. Perfect for work, casual outings, and special occasions, it adds a refined touch to any outfit
                 </p>
             </div>
 
@@ -200,22 +200,22 @@
                 <dl class="product-details-list">
                     <div>
                         <dt>Brand</dt>
-                        <dd id="product-brand">Seiko</dd>
+                        <dd id="product-brand"> Nike Fashion </dd>
                     </div>
 
                     <div>
                         <dt>Category</dt>
-                        <dd id="product-category-detail">Jewelry</dd>
+                        <dd id="product-category-detail">Watches</dd>
                     </div>
 
                     <div>
                         <dt>Color</dt>
-                        <dd id="product-color-detail">Black</dd>
+                        <dd id="product-color-detail">Silver</dd>
                     </div>
 
                     <div>
                         <dt>Available Sizes</dt>
-                        <dd id="product-sizes-detail">23mm, 43mm</dd>
+                        <dd id="product-sizes-detail">One Size</dd>
                     </div>
                 </dl>
             </div>
@@ -246,14 +246,14 @@
             <div class="col-12 col-sm-6 col-lg-3">
                 <article class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1562070354-930df66ead59?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxkcmVzcyUyMG9uJTIwbWFubmVxdWlufGVufDB8MHwwfHx8MA%3D%3D" alt="black and white checkered  button up shirt" class="img-fluid" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1562070354-930df66ead59?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxkcmVzcyUyMG9uJTIwbWFubmVxdWlufGVufDB8MHwwfHx8MA%3D%3D" alt="Stylish Red leather jacket" class="img-fluid" loading="lazy">
                         <span class="product-badge">New</span>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Dresses</span>
                         <h3>Red Leather Jacket</h3>
                         <p class="product-price">₦195,000</p>
-                        <a href="/product-details.html" class="product-link">View Product</a>
+                        <a href="/product-details.html?id=15" class="product-link">View Product</a>
                     </div>
                 </article>
             </div>
@@ -269,7 +269,7 @@
                         <span class="product-category">Bags</span>
                         <h3>Pink Leather Handbag</h3>
                         <p class="product-price">₦150,000</p>
-                        <a href="/product-details.html" class="product-link">View Product</a>
+                        <a href="/product-details.html?id=16" class="product-link">View Product</a>
                     </div>
                 </article>
             </div>
@@ -285,7 +285,7 @@
                         <span class="product-category">Jewelry</span>
                         <h3>Seiko Watch</h3>
                         <p class="product-price">₦430,000</p>
-                        <a href="/product-details.html" class="product-link">View Product</a>
+                        <a href="/product-details.html?id=17" class="product-link">View Product</a>
                     </div>
                 </article>
             </div>
@@ -301,7 +301,7 @@
                         <span class="product-category">Shoes</span>
                         <h3>Peep Toe Heeled Shoes</h3>
                         <p class="product-price">₦500,000</p>
-                        <a href="/product-details.html" class="product-link">View Product</a>
+                        <a href="/product-details.html?id=18" class="product-link">View Product</a>
                     </div>
                 </article>
             </div>

@@ -118,7 +118,7 @@
                   </div>
 
                   <div class="col-6 col-md-6 col-lg-4">
-                     <select name="category" id="category-product" class="form-select">
+                     <select name="category" id="filterByCategories" class="form-select">
   <option selected value="All categories">All categories</option>
   <option value="clothes">Clothes</option>
   <option value="shoes">Shoes</option>
@@ -129,7 +129,7 @@
                   </div>
 
                   <div class="col-6 col-md-6 col-lg-4">
- <select name="sort" id="sort-product" class="form-select">
+ <select name="sort" id="sortProduct" class="form-select">
   <option selected disabled>Sort by: <i class="bi bi-funnel" aria-hidden="true"></i></option> 
 <option value="newest">Newest</option>
 <option value="price-low">Price: Low to High</option>
@@ -152,14 +152,21 @@
           
 
         <!-- Pagination -->
-            <nav aria-label="Search result page">
+          <nav aria-label="Search result page">
                 <!-- Pagination -->
                  <ul class="pagination align-items-center justify-content-center">
-                  <li class="page-item"><a href="/shop.html" class="page-link"  aria-label="previous"><span aria-hidden="true">&laquo;</span></a></li>
-                  <li class="page-item"><a href="#" class="page-link">1</a></li>
-                  <li class="page-item"><a href="#" class="page-link">2</a></li>
-                  <li class="page-item"><a href="#" class="page-link">3</a></li>
-                  <li class="page-item"><a href="#" class="page-link" aria-label="next"><span>&raquo;</span></a></li>
+                  <!-- previous btn -->
+                  <li class="page-item">
+                    <button type="button" class="page-link"  aria-label="previous" id="prev-Btn"><span aria-hidden="true">&laquo;</span></button>
+                  </li>
+
+                  <li class="page-item">
+                    <span href="#" class="page-link" id="pageIndicator">1</span>
+                  </li>
+                  <!-- next button -->
+                  <li class="page-item">
+                    <button type="button"  class="page-link" aria-label="next" id="next-Btn"><span>&raquo;</span></button>
+                  </li>
                  </ul>
             </nav>
 
