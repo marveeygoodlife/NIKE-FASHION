@@ -18,7 +18,7 @@ const products = [
 	{
 		id: 2,
 		name: "Stylish Summer Dress",
-		category: "DRESSES",
+		category: "Dresses",
 		price: 100000,
 		image:
 			"https://images.pexels.com/photos/17071210/pexels-photo-17071210.jpeg",
@@ -267,7 +267,7 @@ const products = [
 			"Elegant women's heels for occasions and stylish everyday looks.",
 		badge: "New",
 		brand: "Nike Fashion",
-		size: [ "39", "40", "41"],
+		size: ["39", "40", "41"],
 		color: ["Black", "Red"],
 		rating: 5,
 	},

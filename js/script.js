@@ -34,7 +34,8 @@ let filteredProducts = products;
 const searchProduct = document.getElementById("search-product");
 const sortProduct = document.getElementById("sortProduct");
 const filterByCategories = document.getElementById("filterByCategories");
-
+let searchTerm = "";
+let selectedCategory = "all";
 
 /* Pagination controls */
 const prevBtn = document.getElementById("prev-Btn");
@@ -51,7 +52,6 @@ const productGrid = document.getElementById("product-grid");
 /* Part A: Render product card to   shop project grid*/
 function renderShopProductCard(product) {
 	if (productGrid) {
-
 		/* create div card */
 		const productCol = document.createElement("div");
 		productCol.classList.add("col-12", "col-sm-6", "col-lg-3");
@@ -155,7 +155,7 @@ function renderCurrentPage() {
 	productGrid.innerHTML = "";
 
 	/* show the 8 products */
-	revealProducts.forEach(product => {
+	revealProducts.forEach((product) => {
 		renderShopProductCard(product);
 	});
 
@@ -170,7 +170,9 @@ function updatePaginationControls() {
 	/* disable prev button first page */
 	if (currentPage === 1) {
 		prevBtn.disabled = true;
-	} else { prevBtn.disabled = false; };
+	} else {
+		prevBtn.disabled = false;
+	}
 
 	/* disabled next button on last page */
 
@@ -178,8 +180,8 @@ function updatePaginationControls() {
 		nextBtn.disabled = true;
 	} else {
 		nextBtn.disabled = false;
-	};
-};
+	}
+}
 
 /* Part F: show next and previous page */
 if (nextBtn) {
@@ -188,7 +190,7 @@ if (nextBtn) {
 			currentPage++;
 			renderCurrentPage();
 		}
-	})
+	});
 }
 
 if (prevBtn) {
@@ -197,34 +199,70 @@ if (prevBtn) {
 			currentPage--;
 			renderCurrentPage();
 		}
-	})
+	});
 }
 /* show current page */
 if (productGrid) {
 	renderCurrentPage();
 }
 
-/* Part G: Filter */
+/* Part G: Filter by search value*/
 
-// get shop product from array 
+// get shop product from array
 searchProduct.addEventListener("input", () => {
-	/* get input value */
-	//convert to lowercase
+	applyFilters();
+});
 
-	let inputValue = searchProduct.value;
-	let searchTerm = inputValue.toLowerCase();
+/* filter by category */
+filterByCategories.addEventListener("change", () => {
+	selectedCategory = filterByCategories.value;
+	applyFilters();
+});
 
-	/* get filtered productd and show it */
+/* filter logic */
+function applyFilters() {
+	const searchInput = searchProduct.value;
+	searchTerm = searchInput.toLowerCase();
+
 	filteredProducts = products.filter(function (product) {
-		const productName = product.name.toLowerCase();
+		let productName = product.name.toLowerCase();
 
-		/* return any product that matches input values */
-		return productName.includes(searchTerm);
+		return (
+			productName.includes(searchTerm) &&
+			(selectedCategory === "all" || product.category === selectedCategory)
+		);
 	});
-	
-	/*display collection from first page.*/
+	applySorting();
 	currentPage = 1;
 
-	/* display product */
 	renderCurrentPage();
- })
+}
+
+/* sorting product */
+
+function applySorting() {
+	const sortValue = sortProduct.value;
+
+	if (sortValue === "price-low-high") {
+		filteredProducts.sort((a, b) => a.price - b.price);
+	} else if (sortValue === "price-high-low") {
+		filteredProducts.sort((a, b) => b.price - a.price);
+	} else if (sortValue === "name-a-z") {
+		filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+	} else if (sortValue === "name-z-a") {
+		filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
+	} else {
+		const originalOrder = new Map(
+			products.map((product, index) => [product.id, index]),
+		);
+		filteredProducts.sort(
+			(a, b) => originalOrder.get(a.id) - originalOrder.get(b.id),
+		);
+	}
+}
+
+if (sortProduct) {
+	sortProduct.addEventListener("change", () => {
+		applyFilters();
+	});
+}
