@@ -1842,9 +1842,7 @@ nav {
 }
 
 
-/* ========================================
-   CONTACT FORM
-======================================== */
+/*CONTACT FORM */
 
 .contact-form-wrapper {
     padding: var(--space-xl);
@@ -1899,11 +1897,54 @@ nav {
     gap: var(--space-sm);
     width: 100%;
 }
+.form-error {
+color: red;
+font-size: .85rem;
+margin: 1.2rem 0;
+}
+ 
+.contact-form .form-input-error {
+    border: 1px solid rgba(255, 0, 0, 0.407);
+    color:   rgba(255, 0, 0, 0.407);
+    border-radius: inherit;
+    background: rgba(255, 0, 0, 0.407) ;
+}
+/* CONTACT CTA*/
 
+/* Show modal */
+.message-modal {
+    width: min(90%, 450px);
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    margin: auto;
+}
 
-/* ========================================
-   CONTACT CTA
-======================================== */
+.message-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.modal-icon {
+    font-size: 3rem;
+    color: #198754;
+    margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
 
 #contact-cta-section {
     padding-block: var(--space-3xl);
